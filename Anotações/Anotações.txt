@@ -1,0 +1,102 @@
+Janelas/Interações com o usuário:
+- window.alert("Minha primeira mensagem!");
+- window.confirm("Está gostando de JS?");
+- window.prompt("Qual é o seu nome?");
+
+
+Trabalhando com váriaveis:
+* STRING
+- var nome = window.prompt("Qual é o seu nome?");
+
+* NUMBER
+- var n1 = Number.parseFloat(window.prompt("Digite um número: ")); //Convertendo para número.
+
+* TIPO DE VÁRIAVEIS
+typeof ######
+
+
+Trabalhando com Strings:
+- document.write(`Seu nome tem ${nome.length} letras.`); 	// Exibindo na tela.
+- document.write(`Seu nome é ${nome.toUpperCase()}.`); 		// Em maiúsculo.
+- document.write(`Seu nome pequeno ${nome.toLowerCase()}.`); 	// Em minúsculo. 
+
+
+Trabalahndo com Number:
+- document.write(`O número digitado foi: ${n1}.`);			// Exibindo o número.
+- document.write(`Com duas casas decimais: ${n1.toFixed(2)}.`);		// Convertendo para duas casas decimais.
+- document.write(`Com vírgula: ${n1.toFixed(2).replace(".", ",")}.`);	// Trocando "." para ","
+- document.write(							// Convertendo para dinheiro (BRL é para REAL).
+        `Em dinheiro: ${n1.toLocaleString("pt-BR", {
+          style: "currency",
+          currency: "BRL",
+        })}` // R$ -> BRL //US$ -> USD //£ -> EUR
+
+
+Operadores aritméticos
+- Soma: +
+- Subtração: -
+- Multiplicação: *
+- Divisão real: /
+- Divisão inteiro: %
+- Expoente: **
+
+Ordem de Precedências
+- ( ... )
+- **
+- * / %
+- + - 
+
+Simplificando cálculo
+- n += x
+- n -= x
+- n *= x
+- n /= x
+- n **= x
+- n %= x
+
+Incremento
+- x++ ou ++x
+- x-- ou --x
+
+
+Operadores relacionais 
+- Menor: <
+- Maior: >
+- Menor ou igual: <=
+- Maior ou igual: >=
+- Igual: ==
+- Diferente: !=
+- Igualdade de valor e tipo (idêntico): === 
+- Desigualdade de valor e/ou tipo (não idêntico): !== 
+
+
+Operadores lógicos
+- Negação: !
+- Conjunção (e): &&
+- Disjunção (ou): ||
+
+Operadores ternários
+- ?
+- :
+EXEMPLO -> TESTE ? TRUE (se verdadeiro) : FALSE (se falso)
+ 
+
+Ordem de Precedências dos OPERADORES
+- Aritméticos
+- Relacionais
+- Lógicos (Não (!), depois o E (&&) e por fim o OU (||))
+- Ternários
+
+
+
+
+
+
+
+
+
+
+
+
+
+

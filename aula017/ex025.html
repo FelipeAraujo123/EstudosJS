@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Análise</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Analise de números</h1>
+    </header>
+
+    <section>
+      <div>
+        <p>
+            <label>Número (de 1 a 100): </label>
+            <input type="number" min = 1 max = 100 name="inicio" id="txtnumero"></input>
+            <input type="button" value="Adicionar" onclick="adicionar()" />
+        </p>
+        <p>
+            <p>
+                <select name="lista" id="lista" size="11"></select>
+            </p>
+            <p>
+                <input type="button" value="Finalizar" onclick="finalizar()" />
+            </p>
+        </p>
+      </div>
+
+      <div id="res">
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; Desenvolvido por Felipe Araujo</p>
+    </footer>
+    <script src="srcipt.js"></script>
+  </body>
+</html>

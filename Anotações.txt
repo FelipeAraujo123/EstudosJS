@@ -1,0 +1,255 @@
+Janelas/Interações com o usuário:
+- window.alert("Minha primeira mensagem!");
+- window.confirm("Está gostando de JS?");
+- window.prompt("Qual é o seu nome?");
+
+
+Trabalhando com váriaveis:
+* STRING
+- var nome = window.prompt("Qual é o seu nome?");
+
+* NUMBER
+- var n1 = Number.parseFloat(window.prompt("Digite um número: ")); //Convertendo para número.
+
+* TIPO DE VÁRIAVEIS
+typeof(...)
+
+
+Trabalhando com Strings:
+- document.write(`Seu nome tem ${nome.length} letras.`); 	// Exibindo na tela.
+- document.write(`Seu nome é ${nome.toUpperCase()}.`); 		// Em maiúsculo.
+- document.write(`Seu nome pequeno ${nome.toLowerCase()}.`); 	// Em minúsculo. 
+
+
+Trabalahndo com Number:
+- document.write(`O número digitado foi: ${n1}.`);			// Exibindo o número.
+- document.write(`Com duas casas decimais: ${n1.toFixed(2)}.`);		// Convertendo para duas casas decimais.
+- document.write(`Com vírgula: ${n1.toFixed(2).replace(".", ",")}.`);	// Trocando "." para ","
+- document.write(							// Convertendo para dinheiro (BRL é para REAL).
+        `Em dinheiro: ${n1.toLocaleString("pt-BR", {
+          style: "currency",
+          currency: "BRL",
+        })}` // R$ -> BRL //US$ -> USD //£ -> EUR
+
+
+Operadores aritméticos
+- Soma: +
+- Subtração: -
+- Multiplicação: *
+- Divisão real: /
+- Divisão inteiro: %
+- Expoente: **
+
+Ordem de Precedências
+- ( ... )
+- **
+- * / %
+- + - 
+
+Simplificando cálculo
+- n += x
+- n -= x
+- n *= x
+- n /= x
+- n **= x
+- n %= x
+
+Incremento
+- x++ ou ++x
+- x-- ou --x
+
+
+Operadores relacionais 
+- Menor: <
+- Maior: >
+- Menor ou igual: <=
+- Maior ou igual: >=
+- Igual: ==
+- Diferente: !=
+- Igualdade de valor e tipo (idêntico): === 
+- Desigualdade de valor e/ou tipo (não idêntico): !== 
+
+
+Operadores lógicos
+- Negação: !
+- Conjunção (e): &&
+- Disjunção (ou): ||
+
+Operadores ternários
+- ?
+- :
+EXEMPLO -> TESTE ? TRUE (se verdadeiro) : FALSE (se falso)
+ 
+
+Ordem de Precedências dos OPERADORES
+- Aritméticos
+- Relacionais
+- Lógicos (Não (!), depois o E (&&) e por fim o OU (||))
+- Ternários
+
+
+DOM -> Document Object Model
+
+**EXEMPLOS**
+<script>
+      var corpo = window.document.body;
+      var p1 = window.document.getElementsByTagName("p")[1];
+
+      window.document.write(`Está escrito assim: ${p1.innerText}.`);
+      p1.style.color = "blue";
+      corpo.style.background = "#000";
+
+      /*var d = window.document.getElementById("msg");
+      d.style.background = "pink";
+      d.innerText = "Carregando...";
+      window.document.getElementById("msg").innerText = "Carregando...";*/
+
+      var d = window.document.querySelector("div#msg");
+      d.style.color = "red";
+      d.style.background = "blue";      
+</script>
+
+
+
+** por Marca
+getElementsByTagName()[]
+
+** por ID
+getElementsById()
+
+** por Nome
+getElementsByName()
+
+** por Classe
+getElementsByCalssName()
+
+** por Seletor
+querySelector()
+querySelectorAll()
+
+
+-> Ações do mouse
+- mouseenter
+- mousemove
+- mousedown
+- mouseup
+- click
+- mouseout
+
+
+Aula 12
+var agora = new Date();
+var hora = agora.getHours();
+
+console.log(`Agora são ${hora} hora(s).`);
+
+if (hora < 5 && hora >= 0) {
+  console.log("Boa madrugada!");
+} else if (hora < 12 && hora > 0) {
+  console.log("Bom dia!");
+} else if (hora < 18 && hora > 0) {
+  console.log("Boa tarde!");
+} else if (hora < 24 && hora > 0) {
+  console.log("Boa noite!");
+} else {
+  console.log("Horário inválido!");
+}
+
+
+
+var agora = new Date();
+var diaSem = agora.getDay();
+
+switch (diaSem) {
+  case 0:
+    console.log("Domingo");
+    break;
+  case 1:
+    console.log("Segunda");
+    break;
+  case 2:
+    console.log("Terça");
+    break;
+  case 3:
+    console.log("Quarta");
+    break;
+  case 4:
+    console.log("Quinta");
+    break;
+  case 5:
+    console.log("Sexta");
+    break;
+  case 6:
+    console.log("Sabado");
+    break;
+  default:
+    console.log("Dia inválido!");
+}
+
+
+
+Repetições
+
+WHILE
+var aux = 2;
+
+//Primeiro testa e depois
+while (aux <= 10) {
+  if (aux % 2 == 0) {
+    console.log(`Tudo bem? Aux recebe ${aux}`);
+  } else {
+    aux += 2;
+  }
+  aux++;
+}
+
+
+DO WHILE
+var aux = 2;
+
+//Primeiro executa e depois testa
+do {
+  console.log(`Teste de auxiliar ${aux}`);
+  aux++;
+} while (aux <= 3);
+
+
+FOR
+for (var aux = 1; aux <= 10; aux++) {
+  console.log(`Valor atual ${aux}`);
+}
+
+
+
+Variável compostas (vetor)
+let num = [5, 8, 2, 9, 3];
+
+num.push(1); //Adicionar um número no final
+num.sort(); //Ordenar
+console.log(num); //Exibir o vetor completo
+console.log(`O vetor tem ${num.length} posições.`); //Exibir a quantidade de posições, começando com 0 (zero)
+console.log(`O primeiro valor do vetor é ${num[0]}`); //Exibindo o valor da primeira posição
+
+for (var pos = 0; pos < num.length; pos++) {
+  console.log(`Coluna ${pos}: ${num[pos]}`);
+}
+
+//Versão simplificada
+for (let pos in num) {
+  console.log(num[pos]);
+}
+
+console.log(num.indexOf(8)); //Retornar a posição que o número (8) está.
+ Quando retornar -1 significa que não existe.
+
+
+
+
+
+
+
+
+
+
+
+
